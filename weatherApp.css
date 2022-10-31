@@ -1,0 +1,90 @@
+#app{
+    width: 65%;
+    height: 50%;
+    margin: 2% 17% 2% 18%;
+    background-size: 100% 100%;
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    text-align: center;
+    border: 1px solid cadetblue;
+}
+.box{
+    margin: 20px 30px;
+    background-color: rgb(30 20 20  / 25%);
+}
+button{
+    border: none;
+}
+.title{
+    margin: 5px;
+}
+.address{
+    margin: 10px;
+    text-decoration: underline solid ;
+    background: none;
+    font-size : 20px;
+}
+button:hover{
+    color: aqua;
+}
+.tool{
+    display: inline-flex;
+    height: 50px;
+    font-size : 20px;
+    
+}
+.search{
+    margin: 0px 5px 10px 5px;
+    background: none;
+    text-align: center;
+}
+#city{
+    margin: 5px;
+    width: 300px;
+    height: 25px;
+}
+.temp{
+    display: flex;
+    margin: 0px 5px 10px 5px;
+    
+}
+.temp button{
+    background: none;
+    text-align: center;
+}
+#name{
+    font-size: 30px;
+}
+#tt{
+    font-size: 40px;
+    display: inline-flex;
+}
+#now{
+    font-size: 40px;
+    display: inline;
+}
+.titleHour{
+    text-decoration: underline solid ;
+    font-size: 25px;
+}
+.weather{
+    width: auto;
+    height: 40px;
+}
+
+.tt{
+    display: inline-flex;
+} 
+p{
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
+}
+.ig{
+    width : 100px;
+    height: 100px;
+}
+.time{
+    font-size : 20px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weatherApp.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body onload="starTime()">
+    <div id="app">
+        <div class= "box">
+            <div class="title">
+                <button class="address">London</button>
+                <button class="address">Tokyo</button>
+                <button class="address">Paris</button>
+                <button class="address">HaNoi</button>
+                <button  class="address">Moskva</button>
+            </div>
+            <div class="tool">
+            <input type="text" id="city" placeholder="City">
+            <button class="search" onclick="getInfo()"><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+            <div class="temp" >
+                <button class= "item tempcol">°C</button>
+                <p>|</p>
+                <button class= "item tempcol">°F</button>
+            </div>
+            </div>
+            <div class="time">
+                <div id="date-txt"></div>
+                <div id="time-txt"></div>
+            </div>
+            <div class="center">
+                <p id="name"></p>
+                <p id="weatherMain"></p>
+                <p id = "tt"><p id ="now">°C</p></p>
+            </div>
+            <div class="hourForecast"  class="container">
+                <div class="row justify-content-center">
+                    <p class="titleHour">HOURLY FORECAST</p> 
+                    <div class="col-2">
+                        <p class="hour" id ="h1"></p>
+                        <p class="weather" id ="weatherhour1"></p>
+                        <img src = " " alt = "" class="ig" id = "image1">
+                        <div>
+                            <span id = "hour1"></span>
+                            <p class="tt" id="tt1">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="hour" id ="h2"></p>
+                        <p class="weather" id ="weatherhour2"></p>
+                        <img src = " " alt = "" class="ig" id = "image2">
+                        <div>
+                            <span   id = "hour2"></span>
+                            <p class="tt" id="tt2">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="hour" id ="h3"></p>
+                        <p class="weather" id ="weatherhour3"></p>
+                        <img src = " " alt = "" class="ig" id = "image3">
+                        <div>
+                            <span id = "hour3"></span>
+                            <p class="tt" id="tt3">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="hour" id ="h4"></p>
+                        <p class="weather" id ="weatherhour4"></p>
+                        <img src = " " alt = "" class="ig" id = "image4">
+                        <div>
+                            <span id = "hour4"></span>
+                            <p class="tt" id="tt4">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="hour" id ="h5"></p>
+                        <p class="weather" id ="weatherhour5"></p>
+                        <img src = " " alt = "" class="ig" id = "image5">
+                        <div>
+                            <span id = "hour5"></span>
+                            <p class="tt" id="tt5">°C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dailyForecast" class="container">
+                <div class="row justify-content-center">
+                    <p class="titleHour"> DAILY FORECAST</p> 
+                    <div class="col-2">
+                        <p class="daily" id="d1"></p>
+                        <p class="weather" id= "weather1"></p>
+                        <img src = " " alt = "" class="ig" id="img1">
+                        <div>
+                            <span id="day1"></span>
+                            <p class="tt" id="daily1">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="daily" id="d2"></p>
+                        <p class="weather" id= "weather2"></p>
+                        <img src = " " alt = "" class="ig" id="img2">
+                        <div>
+                            <span id="day2"></span>
+                            <p class="tt" id="daily2">°C</p>
+                        </div>    
+                    </div>
+                    <div class="col-2">
+                        <p class="daily3" id="d3"></p>
+                        <p class="weather" id= "weather3"></p>
+                        <img src = " " alt = "" class="ig" id="img3">
+                        <div>
+                            <span id="day3"></span>
+                            <p class="tt" id="daily3">°C</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="daily" id="d4"></p>
+                        <p class="weather" id= "weather4"></p>
+                        <img src = " " alt = "" class="ig" id="img4">
+                        <div>
+                            <span id="day4"></span>
+                            <p class="tt" id="daily4">°C</p>
+                            </div>
+                    </div>
+                    <div class="col-2">
+                        <p class="daily" id="d5"></p>
+                        <p class="weather" id= "weather5"></p>
+                        <img src = " " alt = "" class="ig" id="img5">
+                        <div>
+                            <span id="day5"></span>
+                            <p class="tt" id="daily5">°C</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src = "weatherApp.js" ></script>
+</body>
+
+</html>
